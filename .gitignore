@@ -1,9 +1,10 @@
-log/**/*
-build/**/*
-bin/**/*
-pkg/**/*
-.idea/
 **/*/.DS_Store
 .DS_Store
-vendor/**/*
+.idea/
+/.local/
+bin/**/*
+build/**/*
+log/**/*
+pkg/**/*
 profile
+vendor/**/*

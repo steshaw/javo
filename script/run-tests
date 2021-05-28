@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -ueo pipefail
+
+classes=$(cd example/src; rg -l 'public static void main' | perl -pne 's/\.java$//; s/\//./;')
+
+for class in $classes; do
+  if [[ $class == ProducerConsumer ]]; then continue; fi
+  javo -cp example/classes "$class" || true
+  printf "[Press enter to continue]"
+  read -r
+done
